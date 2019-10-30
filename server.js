@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const path = reqire('path');
+const path = require('path');
 
 const app = express();
 var cors = require('cors');
@@ -17,7 +17,7 @@ connectDB();
 
 // Init middleware
 app.use(express.json({extended: false}));
-app.get('/', (req, res) => res.json({msg: 'Welcome to the ContactKeeper API...'}));
+//app.get('/', (req, res) => res.json({msg: 'Welcome to the ContactKeeper API...'}));
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
